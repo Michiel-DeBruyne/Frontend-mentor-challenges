@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-Violet: hsl(257, 40%, 49%);
+    --clr-Soft-Magenta: hsl(300, 69%, 71%);
+
+    --ff-Headings: 'Poppins', sans-serif;
+    --ff-primary: 'Open Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: no-repeat url(../media/bg-mobile.svg) var(--clr-Violet);
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    line-height: 1.5;
+    font-family: var(--ff-primary);
+    font-size: 1.4em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.7;
+    font-family: var(--ff-Headings);
+    font-weight: 700;
+}
+
+img {
+    width: 34vw;
+}
+
+.container {
+    width: min(80vw, 80rem);
+
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+main {
+    margin: 3rem 0 4rem 0;
+}
+
+footer {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+}
+
+/* Header */
+
+header .logo {
+    width: min(40%, 20rem);
+}
+
+/* Main */
+
+main img {
+    margin-bottom: 3rem;
+}
+
+/* intro */
+
+.intro p {
+    padding: 1rem 0;
+}
+
+.btn {
+    padding: 1rem 5rem;
+    border: 0;
+    border-radius: 25px;
+    color: var(--clr-Violet);
+    font-size: 1.2rem;
+}
+
+/* footer */
+
+.social__link {
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+/* Facebook icon is not a perfect circle. fix ?  */
+.fa-facebook {
+    padding: 5px 8px;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+    body {
+        background: var(--clr-Violet) url(../media/bg-desktop.svg) no-repeat;
+        background-size: cover;
+    }
+    main {
+        display: flex;
+        gap: 2rem;
+    }
+
+    main img,
+    .intro {
+        flex: 1;
+        text-align: left;
+    }
+
+    .intro {
+        padding-top: 3rem;
+    }
+
+    footer {
+        justify-content: flex-end;
+    }
+}
