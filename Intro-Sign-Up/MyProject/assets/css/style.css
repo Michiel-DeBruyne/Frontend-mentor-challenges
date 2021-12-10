@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-red-primary: hsl(0, 100%, 74%);
+    --clr-green-primary: hsl(154, 59%, 51%);
+    --clr-blue-accent: hsl(248, 32%, 49%);
+    --clr-D-blue-neutral: hsl(249, 10%, 26%);
+    --clr-gr-blue-neutral: hsl(246, 25%, 77%);
+
+    --fs-primary: 16px;
+    --ff: 'Poppins', sans-serif;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+body {
+    background: var(--clr-red-primary) no-repeat
+        url(../media/bg-intro-mobile.png);
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff);
+    line-height: 1.7;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder {
+    font-weight: var(--fw-600);
+}
+
+h1 {
+    font-weight: var(--fw-700);
+    font-size: 1.8rem;
+}
+
+.bg-blue {
+    background-color: var(--clr-blue-accent);
+}
+.bg-green {
+    background-color: var(--clr-green-primary);
+}
+.small-text {
+    font-size: 0.8rem;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.clr-red {
+    color: red;
+}
+
+.bold {
+    font-weight: var(--fw-700);
+}
+
+input,
+button {
+    display: block;
+    width: 100%;
+    border-radius: 0.2rem;
+    border: 1px solid var(--clr-gr-blue-neutral);
+    padding: 1rem;
+}
+
+.container,
+button {
+    color: white;
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: var(--fw-600);
+    font-size: 1.1rem;
+}
+
+.container {
+    text-align: center;
+    width: min(90vw, 70rem);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.disclaimer {
+    padding: 1rem 3rem;
+}
+
+form {
+    background-color: white;
+    padding: 1rem;
+}
+
+.disclaimer,
+form {
+    border-radius: 7px;
+    box-shadow: 0 5px rgba(63, 62, 62, 0.4);
+}
+
+form {
+    display: grid;
+    gap: 0.5rem;
+    color: var(--clr-gr-blue-neutral);
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-image: url(../media/bg-intro-desktop.png);
+    }
+    .container {
+        flex-direction: row;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    section:first-child {
+        place-content: center;
+        text-align: left;
+    }
+}
